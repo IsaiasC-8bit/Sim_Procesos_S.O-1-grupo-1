@@ -36,76 +36,87 @@ namespace Sim_RR_G1
         private int quantum_usado = 0;
         private Random azar = new Random();
         private const double PROB_FIN_INDF = 0.03;
+
         public int Quantum => quantum;
-        //Va a indicar el quantum inicial a usar :D       
+
+        // Constructor con validación para evitar Quantum inválido (0 o negativo)
         public Planificador(int quantum_salvegalaxar)
         {
-            quantum = quantum_salvegalaxar;
+            quantum = quantum_salvegalaxar > 0 ? quantum_salvegalaxar : 3;
         }
+
+        // Método para agregar un nuevo proceso a la cola de espera
+        public void Agregar_Proceso(Proceso p)
+        {
+            p.Estado_Proceso = "Listo";
+            Queue_RR.Enqueue(p);
+        }
+
+        // Cancelar o forzar la salida del proceso actual de la CPU
         public string kill_Proceso()
         {
-            if (Cpu_Status == null) return "";
-            string mensaje = $"[X] El Proceso P{Cpu_Status.Proc_ID} le debia dinero a la maña";
+            if (Cpu_Status == null) return string.Empty;
+
+            string mensaje = $"[X] El Proceso P{Cpu_Status.Proc_ID} fue terminado manualmente.";
             Cpu_Status.Estado_Proceso = "Terminado";
             Cpu_Status = null;
             quantum_usado = 0;
             return mensaje;
         }
+
+        // Lógica de ejecución por cada ciclo de reloj
         public string EjecucionCiclo()
         {
-            string mensaje = "";
+            string mensaje = string.Empty;
+
             if (Cpu_Status != null)
             {
                 if (!Cpu_Status.T_indefinido)
                 {
                     Cpu_Status.Tiempo_Restante--;
                 }
+
                 Cpu_Status.Tiempo_de_Ejecucion++;
                 quantum_usado++;
-                bool trabajo_terminado = false;
-                bool trabajo_terminado_indefinido = false;
-                if (Cpu_Status.T_indefinido)
-                {
-                    if (azar.NextDouble() < PROB_FIN_INDF)
-                    {
-                        trabajo_terminado_indefinido = true;
-                    }
-                }
-                else
-                {
-                    trabajo_terminado = Cpu_Status.Tiempo_Restante <= 0;
-                }
-                if (trabajo_terminado)
+
+                // Evalúa si el trabajo terminó (finito o indefinido por probabilidad)
+                bool trabajoTerminado = Cpu_Status.T_indefinido 
+                    ? azar.NextDouble() < PROB_FIN_INDF 
+                    : Cpu_Status.Tiempo_Restante <= 0;
+
+                if (trabajoTerminado)
                 {
                     Cpu_Status.Estado_Proceso = "Terminado";
-                    mensaje = $"[!] Proceso P{Cpu_Status.Proc_ID} finalizado (Total en CPU: {Cpu_Status.Tiempo_de_Ejecucion}s).";
-                    Cpu_Status = null; // Libera la CPU
+                    mensaje = Cpu_Status.T_indefinido 
+                        ? $"[!] Proceso P{Cpu_Status.Proc_ID} finalizó su ejecución indefinida (Total: {Cpu_Status.Tiempo_de_Ejecucion}s)."
+                        : $"[!] Proceso P{Cpu_Status.Proc_ID} finalizado (Total en CPU: {Cpu_Status.Tiempo_de_Ejecucion}s).";
+                    
+                    Cpu_Status = null; // Liberar la CPU
                 }
-                else if (trabajo_terminado_indefinido)
+                else if (quantum_usado >= quantum) // Expropiación por fin de Quantum
                 {
-                    Cpu_Status.Estado_Proceso = "Terminado";
-                    mensaje = $"[!] Proceso P{Cpu_Status.Proc_ID} finalizó su ejecución indefinida por azar (Total en CPU: {Cpu_Status.Tiempo_de_Ejecucion}s).";
-                    Cpu_Status = null; // Libera la CPU
+                    // Guardamos la referencia no nula para evitar errores de compilación
+                    Proceso procesoActual = Cpu_Status;
+
+                    procesoActual.Estado_Proceso = "Listo";
+                    Queue_RR.Enqueue(procesoActual); // Vuelve al final de la cola
+                    mensaje = $"[*] P{procesoActual.Proc_ID} agotó su quantum. Vuelve a formarse.";
+                    Cpu_Status = null; // Liberar la CPU
                 }
-                else if (quantum_usado >= quantum) // ¡SE LE ACABÓ EL TIEMPO! (Expropiación)
-                {
-                    Cpu_Status.Estado_Proceso = "Listo";
-                    Queue_RR.Enqueue(Cpu_Status); // Lo mandamos a formarse al final de la cola
-                    mensaje = $"[*] P{Cpu_Status.Proc_ID} agotó su quantum. Vuelve a formarse.";
-                    Cpu_Status = null; // Libera la CPU
-                }
-                
             }
+
+            // Si la CPU quedó libre, se asigna el siguiente de la cola
             if (Cpu_Status == null && Queue_RR.Count > 0)
             {
-                Cpu_Status = Queue_RR.Dequeue(); // Saca al primero de la cola
+                Cpu_Status = Queue_RR.Dequeue();
                 Cpu_Status.Estado_Proceso = "Ejecutando";
-                quantum_usado = 0; // ¡Importante! El nuevo Proceso empieza su quantum desde cero
+                quantum_usado = 0; // El nuevo proceso inicia su quantum de cero
             }
-            // Si no hay Proceso en la CPU devolvemos una cadena vacía (evita CS0161)
+
             return mensaje;
         }
     }
+}
     public class Interfaz_Consola
     {
         public static void Dibujar(Planificador planificador, int reloj, List<string> historial)
@@ -187,7 +198,7 @@ namespace Sim_RR_G1
         static void Main()
         {
             int quantumInicial = PedirQuantumInicial;
-            Planificador planificador = new Planificador()
+            Planificador planificador = new Planificador();
             Random rnd = new Random();
 
             Console.CursorVisible = false;
@@ -227,7 +238,7 @@ namespace Sim_RR_G1
                     {
                         Console.Clear();
                         Console.WriteLine("Simulador finalizado. Presione cualquier tecla para salir...");
-                        break
+                        break;
                     }
                 }
 
@@ -267,6 +278,6 @@ namespace Sim_RR_G1
             return rnd.Next(4, 12);
         }
     }
-}
+
 
    
