@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\isaia\\source\\repos\\Simulador_Round_Robin\\",
+  "WorkspaceRootPath": "C:\\Users\\isaia\\OneDrive\\Desktop\\Repositorios\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5171ECC7-30A0-B528-7E42-8327DA85AC55}|Simulador_Round_Robin\\Simulador_Round_Robin.csproj|c:\\users\\isaia\\source\\repos\\simulador_round_robin\\simulador_round_robin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5171ECC7-30A0-B528-7E42-8327DA85AC55}|Simulador_Round_Robin\\Simulador_Round_Robin.csproj|c:\\users\\isaia\\onedrive\\desktop\\repositorios\\sim_procesos_s.o-1-grupo-1\\simulador_round_robin\\simulador_round_robin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5171ECC7-30A0-B528-7E42-8327DA85AC55}|Simulador_Round_Robin\\Simulador_Round_Robin.csproj|solutionrelative:simulador_round_robin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\isaia\\source\\repos\\Simulador_Round_Robin\\Simulador_Round_Robin\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\isaia\\OneDrive\\Desktop\\Repositorios\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Program.cs",
               "RelativeDocumentMoniker": "Simulador_Round_Robin\\Program.cs",
-              "ToolTip": "C:\\Users\\isaia\\source\\repos\\Simulador_Round_Robin\\Simulador_Round_Robin\\Program.cs",
+              "ToolTip": "C:\\Users\\isaia\\OneDrive\\Desktop\\Repositorios\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Program.cs",
               "RelativeToolTip": "Simulador_Round_Robin\\Program.cs",
-              "ViewState": "AgIAAOkAAAAAAAAAAAAqwAwBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAYwHkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-17T15:55:31.537Z",
               "EditorCaption": ""
