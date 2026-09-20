@@ -7,26 +7,62 @@ namespace Sim_RR_G1
     //Clase de Control de Procesos. (PCB)
     public class Proceso
     { 
-        //---------------
-        public int Proc_ID { get; set; }
-        public int Tiempo_Estimado { get; set; }
-        //---------------- 
-        public int Tiempo_Restante { get; set; }
-        public string Estado_Proceso { get; set; }
-        //--------------
-        public bool T_indefinido { get; set; }
-        public int Tiempo_de_Ejecucion { get; set; } = 0;
-        //Constructor que inicia Procesos en Listo
-        public Proceso (int pro_id, int tmp_burst, bool t_indefinido)
-        {
-            Proc_ID = pro_id;
-            T_indefinido = t_indefinido;
+    // Constantes con los tres estados posibles del proceso, evitan errores de texto
+    public const string ESTADO_LISTO = "Listo";
+    public const string ESTADO_EJECUTANDO = "Ejecutando";
+    public const string ESTADO_TERMINADO = "Terminado";
 
-            Tiempo_Estimado = t_indefinido ? -1 : tmp_burst;
-            Tiempo_Restante = t_indefinido ? -1 : tmp_burst;
-            Estado_Proceso = "Listo";
-        }
+    // ID unico que identifica al proceso
+    public int Proc_ID { get; set; }
+    // Nombre visible del proceso, autogenerado o personalizado
+    public string Nombre { get; set; }
+    // Duracion total que necesita el proceso (-1 si es indefinido)
+    public int Tiempo_Estimado { get; set; }
+    // Tiempo que le falta por ejecutar, lo descuenta el Planificador
+    public int Tiempo_Restante { get; set; }
+    // Estado actual del proceso dentro de la simulacion
+    public string Estado_Proceso { get; set; }
+    // Indica si el proceso no tiene una duracion fija
+    public bool T_indefinido { get; set; }
+    // Tiempo real acumulado que el proceso ha usado la CPU
+    public int Tiempo_de_Ejecucion { get; set; } = 0;
+
+    // Constructor: crea el proceso y lo deja listo para entrar a la cola
+    public Proceso(int pro_id, int tmp_burst, bool t_indefinido, string? nombre = null)
+    {
+    // Si el ID no es valido, se detiene la creacion con un error claro
+    if (pro_id <= 0)
+        throw new ArgumentException("El ID del proceso debe ser mayor a 0.", nameof(pro_id));
+
+    // Si el proceso es finito pero su duracion es invalida, tambien se detiene
+    if (!t_indefinido && tmp_burst <= 0)
+        throw new ArgumentException("La duracion del proceso debe ser mayor a 0.", nameof(tmp_burst));
+
+    // Asigna el ID recibido
+    Proc_ID = pro_id;
+    // Usa el nombre dado, o genera uno automatico si no se especifico
+    Nombre = string.IsNullOrWhiteSpace(nombre) ? $"Proceso-{pro_id}" : nombre;
+    // Guarda si el proceso es indefinido
+    T_indefinido = t_indefinido;
+
+    // Si es indefinido, el tiempo estimado no aplica (-1); si no, usa el burst dado
+    Tiempo_Estimado = t_indefinido ? -1 : tmp_burst;
+    // Igual que arriba, pero para el tiempo restante inicial
+    Tiempo_Restante = t_indefinido ? -1 : tmp_burst;
+    // Todo proceso nuevo arranca en estado "Listo"
+    Estado_Proceso = ESTADO_LISTO;
     }
+
+    // Devuelve una version legible del proceso, util para mostrar en consola o depurar
+    public override string ToString()
+    {
+    // Arma el texto del tiempo segun si es indefinido o no
+    string tiempo = T_indefinido ? "indefinido" : $"{Tiempo_Restante}s restantes";
+    // Devuelve todo junto en un solo string
+    return $"[{Nombre} | ID={Proc_ID} | {Estado_Proceso} | {tiempo}]";
+    }
+    }
+    
     public class Planificador 
     {
         public Queue<Proceso> Queue_RR { get; private set; } = new Queue<Proceso>();
