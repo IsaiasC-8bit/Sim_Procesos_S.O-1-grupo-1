@@ -226,6 +226,8 @@ namespace Sim_RR_G1
             Console.WriteLine("=======================================================================================================");
         }
     }
+namespace Simulador_Round_Robin
+{
     class Program
     {
         static int relojGlobal = 0;
@@ -234,12 +236,12 @@ namespace Sim_RR_G1
 
         static void Main()
         {
-            int quantumInicial = PedirQuantumInicial;
-            Planificador planificador = new Planificador();
+            int quantumInicial = PedirQuantumInicial();
+            Planificador planificador = new Planificador(quantumInicial);
             Random rnd = new Random();
 
             Console.CursorVisible = false;
-            Console.Clear;
+            Console.Clear();
 
             while (true)
             {
@@ -250,20 +252,20 @@ namespace Sim_RR_G1
                     if (tecla == ConsoleKey.A)
                     {
                         int duracion = PedirDuracionProceso(rnd);
-                        proceso nuevoP = new proceso(contadorPID, duracion, false);
+                        Proceso nuevoP = new Proceso(contadorPID, duracion, false);
                         planificador.Agregar_Proceso(nuevoP);
                         historialEventos.Add($"[+] P{nuevoP.Proc_ID} llegó a la cola ({duracion}s).");
                         Console.Clear();
                     }
                     else if (tecla == ConsoleKey.I)
                     {
-                        proceso nuevoP = new proceso(contadorPID++, 0, true);
+                        Proceso nuevoP = new Proceso(contadorPID++, 0, true);
                         planificador.Agregar_Proceso(nuevoP);
                         historialEventos.Add($"[+] P{nuevoP.Proc_ID} llegó a la cola (indefinido).");
                     }
                     else if (tecla == ConsoleKey.K)
                     {
-                        string msg = planificador.kill_proceso;
+                        string msg = planificador.kill_Proceso();
                         if (!string.IsNullOrEmpty(msg)) historialEventos.Add(msg);
                     }
                     else if (tecla == ConsoleKey.L)
@@ -315,6 +317,5 @@ namespace Sim_RR_G1
             return rnd.Next(4, 12);
         }
     }
-
-
+}
    
