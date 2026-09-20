@@ -13,3 +13,19 @@ C:\Users\isaia\source\repos\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debu
 C:\Users\isaia\source\repos\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.genruntimeconfig.cache
 C:\Users\isaia\source\repos\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\ref\Simulador_Round_Robin.dll
 C:\Users\isaia\source\repos\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulado.89DDDA38.Up2Date
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.AssemblyInfoInputs.cache
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.AssemblyInfo.cs
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.csproj.CoreCompileInputs.cache
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.sourcelink.json
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.dll
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\refint\Simulador_Round_Robin.dll
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.pdb
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\bin\Debug\net10.0\Simulador_Round_Robin.exe
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\bin\Debug\net10.0\Simulador_Round_Robin.deps.json
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\bin\Debug\net10.0\Simulador_Round_Robin.runtimeconfig.json
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\bin\Debug\net10.0\Simulador_Round_Robin.dll
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\bin\Debug\net10.0\Simulador_Round_Robin.pdb
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulador_Round_Robin.genruntimeconfig.cache
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\ref\Simulador_Round_Robin.dll
+C:\Users\Angel R\Desktop\Proyecto Sistemas Operativos 1\Sim_Procesos_S.O-1-grupo-1\Simulador_Round_Robin\Simulador_Round_Robin\obj\Debug\net10.0\Simulado.89DDDA38.Up2Date

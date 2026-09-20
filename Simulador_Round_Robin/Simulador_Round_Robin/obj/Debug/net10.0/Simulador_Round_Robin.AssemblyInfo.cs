@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Simulador_Round_Robin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51c5c1b9314886406f411d20f269c41ac83ba8b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90ada2e1934074571d28b11b8670925f5c2100d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Simulador_Round_Robin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Simulador_Round_Robin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
