@@ -226,7 +226,7 @@ namespace Sim_RR_G1
             Console.WriteLine("=======================================================================================================");
         }
     }
-namespace Simulador_Round_Robin
+namespace Simulador_Round_Robin //Angel Roquel
 {
     class Program
     {

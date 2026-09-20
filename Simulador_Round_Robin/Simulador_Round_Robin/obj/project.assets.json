@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Angel R\\Desktop\\Proyecto Sistemas Operativos 1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Simulador_Round_Robin.csproj",
+      "projectUniqueName": "C:\\Users\\Angel R\\Desktop\\PSO1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Simulador_Round_Robin.csproj",
       "projectName": "Simulador_Round_Robin",
-      "projectPath": "C:\\Users\\Angel R\\Desktop\\Proyecto Sistemas Operativos 1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Simulador_Round_Robin.csproj",
+      "projectPath": "C:\\Users\\Angel R\\Desktop\\PSO1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Simulador_Round_Robin.csproj",
       "packagesPath": "C:\\Users\\Angel R\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Angel R\\Desktop\\Proyecto Sistemas Operativos 1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\obj\\",
+      "outputPath": "C:\\Users\\Angel R\\Desktop\\PSO1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
