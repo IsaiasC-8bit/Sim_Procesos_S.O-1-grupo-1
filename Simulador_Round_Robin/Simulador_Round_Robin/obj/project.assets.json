@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Angel R\\.nuget\\packages\\": {},
+    "C:\\Users\\isaia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Angel R\\Desktop\\Proyecto Sistemas Operativos 1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Simulador_Round_Robin.csproj",
+      "projectUniqueName": "C:\\Users\\isaia\\OneDrive\\Desktop\\Repositorios\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Simulador_Round_Robin.csproj",
       "projectName": "Simulador_Round_Robin",
-      "projectPath": "C:\\Users\\Angel R\\Desktop\\Proyecto Sistemas Operativos 1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Simulador_Round_Robin.csproj",
-      "packagesPath": "C:\\Users\\Angel R\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Angel R\\Desktop\\Proyecto Sistemas Operativos 1\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\obj\\",
+      "projectPath": "C:\\Users\\isaia\\OneDrive\\Desktop\\Repositorios\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\Simulador_Round_Robin.csproj",
+      "packagesPath": "C:\\Users\\isaia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\isaia\\OneDrive\\Desktop\\Repositorios\\Sim_Procesos_S.O-1-grupo-1\\Simulador_Round_Robin\\Simulador_Round_Robin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Angel R\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\isaia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -32,8 +32,7 @@
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
       },
       "frameworks": {
         "net10.0": {
